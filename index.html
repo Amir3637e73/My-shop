@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>شاپ خدمات مجازی</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b12;color:#fff;font-family:Tahoma,Arial,sans-serif}
+header{padding:25px 15px;text-align:center;background:linear-gradient(135deg,#35106b,#10101c)}
+header h1{margin:0;color:#d5a5ff}
+header p{color:#ddd}
+nav{display:flex;justify-content:center;gap:18px;padding:15px;background:#151520;flex-wrap:wrap}
+nav a{color:#fff;text-decoration:none}
+main{max-width:1000px;margin:auto;padding:20px}
+h2{color:#d5a5ff}
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:14px}
+.card{background:#171723;border:1px solid #343044;border-radius:14px;padding:18px;text-align:center}
+.icon{font-size:35px}
+.card h3{margin:12px 0}
+.price{color:#c99aff;font-weight:bold}
+button{background:#8b3dce;color:#fff;border:0;border-radius:9px;padding:11px 15px;font-size:14px;cursor:pointer}
+button:hover{background:#a75be8}
+.notice{background:#191522;border-radius:12px;padding:16px;margin-top:25px;line-height:2}
+footer{text-align:center;padding:25px;color:#aaa}
+</style>
+</head>
+<body>
+<header>
+<h1>💜 PARSA SHOP</h1>
+<p>فروشگاه خدمات مجازی و محصولات دیجیتال</p>
+</header>
+<nav>
+<a href="#games">🎮 بازی‌ها</a>
+<a href="#telegram">📱 خدمات تلگرام</a>
+<a href="#vpn">🌐 VPN</a>
+<a href="#support">💬 پشتیبانی</a>
+</nav>
+<main>
+<section id="games">
+<h2>🎮 بازی و گیمینگ</h2>
+<div class="products">
+<div class="card"><div class="icon">🎮</div><h3>محصولات گیمینگ</h3><p>انواع خدمات بازی</p><p class="price">قیمت توافقی</p><button onclick="order('محصولات گیمینگ')">ثبت سفارش</button></div>
+<div class="card"><div class="icon">🕹️</div><h3>اکانت و آیتم بازی</h3><p>محصولات دیجیتال مجاز</p><p class="price">قیمت توافقی</p><button onclick="order('اکانت و آیتم بازی')">ثبت سفارش</button></div>
+</div>
+</section>
+<section id="telegram">
+<h2>📱 خدمات تلگرام</h2>
+<div class="products">
+<div class="card"><div class="icon">✈️</div><h3>خدمات تلگرام</h3><p>خدمات مجاز شبکه اجتماعی</p><p class="price">قیمت توافقی</p><button onclick="order('خدمات تلگرام')">ثبت سفارش</button></div>
+</div>
+</section>
+<section id="vpn">
+<h2>🌐 خدمات اینترنت</h2>
+<div class="products">
+<div class="card"><div class="icon">🔒</div><h3>خدمات VPN</h3><p>سرویس‌های مجاز و معتبر</p><p class="price">قیمت توافقی</p><button onclick="order('خدمات VPN')">ثبت سفارش</button></div>
+</div>
+</section>
+<div class="notice" id="support">
+<h2>💬 پشتیبانی و سفارش</h2>
+<p>برای ثبت سفارش، محصول موردنظر را انتخاب کنید و از طریق تلگرام با ما در ارتباط باشید.</p>
+<p>آیدی تلگرام فروشگاه: <b>YOUR_TELEGRAM</b></p>
+</div>
+</main>
+<footer>© فروشگاه PARSA SHOP</footer>
+<script>
+function order(product){
+const username='YOUR_TELEGRAM';
+if(username==='YOUR_TELEGRAM'){
+alert('ابتدا آیدی تلگرام فروشگاه را در کد وارد کنید.');
+return;
+}
+window.open('https://t.me/'+username+'?text='+encodeURIComponent('سلام، برای '+product+' سفارش دارم.'),'_blank');
+}
+</script>
+</body>
+</html>
